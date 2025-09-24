@@ -11,7 +11,7 @@ from tensorflow.keras.preprocessing import image
 from imagenet_utils import load_imagenet_classes, decode_predictions
 
 # 简化字体设置
-plt.rcParams['font.family'] = ['DejaVu Sans', 'Arial', 'sans-serif']
+plt.rcParams['font.family'] = ['DejaVu Sans', 'Arial', 'sans-serif', 'SimHei']
 
 def test_image_recognition(image_path):
     """测试图像识别"""

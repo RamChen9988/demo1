@@ -141,7 +141,7 @@ class LargeImageAdversarialDemo:
         
         # 扰动（放大显示）
         plt.subplot(1, 3, 2)
-        perturb_vis = perturbation[0] * 10  # 放大扰动
+        perturb_vis = perturbation[0] * 1  # 放大扰动
         perturb_vis = np.clip(perturb_vis + 127, 0, 255).astype('uint8')  # 调整到可视范围
         plt.imshow(perturb_vis)
         plt.title("Perturbation (10x)", fontsize=12)
@@ -201,7 +201,7 @@ if __name__ == "__main__":
     
     # 替换为你的本地图片路径
     # 推荐使用清晰的物体图片，如猫、狗、汽车、飞机等
-    image_path = "5.jpg"  # 使用当前目录下的图片
+    image_path = "1.jpg"  # 使用当前目录下的图片
     
     # 运行演示
     # attack_method可选'fgsm'（快速）或'pgd'（更强）
@@ -219,10 +219,10 @@ if __name__ == "__main__":
     #demo.run_demo(image_path, attack_method='pgd', eps=0.1)
     
     # 选项3：弱攻击（更隐形但攻击效果可能减弱）
-    # demo.run_demo(image_path, attack_method='pgd', eps=0.5)
+    #demo.run_demo(image_path, attack_method='pgd', eps=0.5)
     
     # 选项4：使用FGSM方法（通常产生更隐形的扰动）
-    # demo.run_demo(image_path, attack_method='fgsm', eps=0.03)
+    #demo.run_demo(image_path, attack_method='fgsm', eps=1)
     
     # 选项5：调整扰动可视化放大倍数（在visualize_results方法中修改）
     # 将 perturb_vis = perturbation[0] * 10 改为 perturb_vis = perturbation[0] * 5 或更小

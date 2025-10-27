@@ -94,6 +94,7 @@ class AISecurityDemo:
         substitute_loss, substitute_acc = self.substitute_model.evaluate(self.x_test, self.y_test, verbose=0)
         print(f"      替代模型准确率: {substitute_acc:.4f}")
     
+    #===============================================================================================================
     def whitebox_attack(self):
         """在替代模型上进行白盒攻击演示"""
         print("\n4. 白盒攻击演示（在替代模型上）...")
@@ -148,7 +149,7 @@ class AISecurityDemo:
         print(f"   黑盒迁移攻击成功率: {1 - target_adv_accuracy:.4f}")
         
         return target_adv_accuracy
-    
+    #===================================================================================
     def adversarial_training(self):
         """对抗训练演示"""
         print("\n6. 对抗训练防御演示...")

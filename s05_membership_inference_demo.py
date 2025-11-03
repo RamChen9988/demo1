@@ -234,6 +234,7 @@ class MembershipInferenceDemo:
         
         plt.tight_layout()
         plt.savefig('membership_inference_demo.png', dpi=150, bbox_inches='tight')
+        plt.show()
         print("   ✓ 演示结果已保存为 'membership_inference_demo.png'")
 
 def main():
